@@ -91,4 +91,58 @@ var finances = [
 var totalMonths = (finances.length);
 console.log(totalMonths);
 
+/* calculate the net amount of profit/losses over the entire period */
+var totalProfitLoss = 0;
 
+for (var i = 0; i < finances.length; i++) {
+     totalProfitLoss += finances[i][1]
+    }
+
+console.log(totalProfitLoss);
+
+
+
+/* calculate the average changes in profit/loss over the entire period */
+
+let profitLoss = []; // variable for the profit/losses
+let changeProfitLoss = [] // variable for change in profit/losses
+
+
+for (var i = 0; i < finances.length; i++) {
+    
+ profitLoss.push(finances[i][1]); // create a new array for the profit/losses for each month
+}
+console.log(profitLoss);
+
+// calculate the change in profit/losses for each month and add to new array "changeProfitLoss"
+
+
+for (var i = 0; i < profitLoss.length -1; i++) {
+    changeProfitLoss.push(profitLoss[i]-profitLoss[i+1]);
+}
+console.log(changeProfitLoss);
+
+// calculate the average change in profit/losses
+
+var totalChange = 0
+
+for (var i = 0; i < changeProfitLoss.length; i++) {
+    totalChange += changeProfitLoss[i];
+}
+
+console.log(totalChange);
+
+// calculate the average change in profit/losses
+
+let averageChange = 0; // variable for the average profit/loss changes
+
+averageChange = totalChange/totalMonths
+
+console.log(averageChange);
+/*
+changeProfitLoss.push(finances[i][1] - finances[i+1][1]);
+
+totalChange += changeProfitLoss[i]; // total profit/loss change is the sum of the individual changes added to the array changeProfitLoss
+
+console.log(changeProfitLoss);
+console.log(totalChange); */

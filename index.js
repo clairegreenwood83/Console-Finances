@@ -116,9 +116,8 @@ console.log(profitLoss);
 
 // calculate the change in profit/losses for each month and add to new array "changeProfitLoss"
 
-
 for (var i = 0; i < profitLoss.length -1; i++) {
-    changeProfitLoss.push(profitLoss[i]-profitLoss[i+1]);
+    changeProfitLoss.push(profitLoss[i+1]-profitLoss[i]);
 }
 console.log(changeProfitLoss);
 
@@ -135,14 +134,21 @@ console.log(totalChange);
 // calculate the average change in profit/losses
 
 let averageChange = 0; // variable for the average profit/loss changes
+let numMonths = totalMonths - 1;
 
-averageChange = totalChange/totalMonths
+averageChange = totalChange/numMonths
 
-console.log(averageChange);
-/*
-changeProfitLoss.push(finances[i][1] - finances[i+1][1]);
+console.log(averageChange.toFixed(2));
 
-totalChange += changeProfitLoss[i]; // total profit/loss change is the sum of the individual changes added to the array changeProfitLoss
+// calculate the maxiumum profit made
 
-console.log(changeProfitLoss);
-console.log(totalChange); */
+const maxProfit = changeProfitLoss.reduce((a, b) => Math.max(a, b), -Infinity);
+
+console.log(maxProfit);
+
+let indexMax = changeProfitLoss.indexOf(1926159);
+
+console.log(indexMax); // calculate the index of the max profit change
+
+
+// calculate the maximum loss 

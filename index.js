@@ -89,7 +89,9 @@ var finances = [
 
 /* calculate the total number of months included in the dataset */
 var totalMonths = (finances.length);
-console.log(totalMonths);
+console.log("Financial Analysis")
+console.log("----------------");
+console.log("Total Months is: " + totalMonths);
 
 /* calculate the net amount of profit/losses over the entire period */
 var totalProfitLoss = 0;
@@ -98,7 +100,7 @@ for (var i = 0; i < finances.length; i++) {
      totalProfitLoss += finances[i][1]
     }
 
-console.log(totalProfitLoss);
+console.log("Total: $" + totalProfitLoss);
 
 
 
@@ -112,14 +114,14 @@ for (var i = 0; i < finances.length; i++) {
     
  profitLoss.push(finances[i][1]); // create a new array for the profit/losses for each month
 }
-console.log(profitLoss);
+/* console.log(profitLoss); */
 
 // calculate the change in profit/losses for each month and add to new array "changeProfitLoss"
 
 for (var i = 0; i < profitLoss.length -1; i++) {
     changeProfitLoss.push(profitLoss[i+1]-profitLoss[i]);
 }
-console.log(changeProfitLoss);
+// console.log( + changeProfitLoss);
 
 // calculate the average change in profit/losses
 
@@ -129,7 +131,7 @@ for (var i = 0; i < changeProfitLoss.length; i++) {
     totalChange += changeProfitLoss[i];
 }
 
-console.log(totalChange);
+// console.log( + totalChange);
 
 // calculate the average change in profit/losses
 
@@ -138,7 +140,7 @@ let numMonths = totalMonths - 1;
 
 averageChange = totalChange/numMonths
 
-console.log(averageChange.toFixed(2));
+console.log("Average Change: " + averageChange.toFixed(2) + " this includes the first month!");
 
 // calculate the maxiumum profit made
 
@@ -148,27 +150,27 @@ console.log(maxProfit);
 
 let indexMax = changeProfitLoss.indexOf(maxProfit);
 
-console.log(indexMax); // calculate the index of the max profit change
+// console.log(indexMax); // calculate the index of the max profit change
 
 var valueAtIndexMax = finances[indexMax + 1];
 
-console.log(valueAtIndexMax);
+// console.log(valueAtIndexMax);
 
 var dateMax = valueAtIndexMax[0];
 
-console.log(dateMax);
+console.log("Greatest Increase: " + dateMax + ": $" + maxProfit + " (current month - previous month)" );
 
 
 // calculate the maximum loss 
 
 const minProfit = Math.min(...changeProfitLoss);
-console.log(minProfit);
+// console.log(minProfit);
 
 let indexMin = changeProfitLoss.indexOf(minProfit);
-console.log(indexMin);
+// console.log(indexMin);
 
 var valueAtIndexMin = finances[indexMin + 1];
-console.log(valueAtIndexMin);
+// console.log(valueAtIndexMin);
 
 var dateMin = valueAtIndexMin[0];
-console.log(dateMin);
+console.log("Greatest Decrease: " + dateMin + ": $" +minProfit + " (current month - previous month)");

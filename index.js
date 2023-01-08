@@ -142,13 +142,33 @@ console.log(averageChange.toFixed(2));
 
 // calculate the maxiumum profit made
 
-const maxProfit = changeProfitLoss.reduce((a, b) => Math.max(a, b), -Infinity);
+const maxProfit = Math.max(...changeProfitLoss);
 
 console.log(maxProfit);
 
-let indexMax = changeProfitLoss.indexOf(1926159);
+let indexMax = changeProfitLoss.indexOf(maxProfit);
 
 console.log(indexMax); // calculate the index of the max profit change
 
+var valueAtIndexMax = finances[indexMax + 1];
+
+console.log(valueAtIndexMax);
+
+var dateMax = valueAtIndexMax[0];
+
+console.log(dateMax);
+
 
 // calculate the maximum loss 
+
+const minProfit = Math.min(...changeProfitLoss);
+console.log(minProfit);
+
+let indexMin = changeProfitLoss.indexOf(minProfit);
+console.log(indexMin);
+
+var valueAtIndexMin = finances[indexMin + 1];
+console.log(valueAtIndexMin);
+
+var dateMin = valueAtIndexMin[0];
+console.log(dateMin);

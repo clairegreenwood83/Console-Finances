@@ -101,6 +101,12 @@ for (var i = 0; i < finances.length; i++) {
      totalProfitLoss += finances[i][1]
     }
 
+/*var i = 0;
+while (i < finances.length){
+    totalProfitLoss += finances[i][1]
+    i++
+}*/
+
 console.log("Total: $" + totalProfitLoss);
 
 
@@ -120,16 +126,22 @@ for (var i = 0; i < finances.length; i++) {
 
 for (var i = 0; i < profitLoss.length -1; i++) {
     changeProfitLoss.push(profitLoss[i+1]-profitLoss[i]);
-}
-// console.log( + changeProfitLoss);
+} 
+
 
 
 /* calculate the average change in profit/losses */
 
-var totalChange = 0
+/*var totalChange = 0
 
 for (var i = 0; i < changeProfitLoss.length; i++) {
     totalChange += changeProfitLoss[i];
+} */
+
+var totalChange = 0
+
+for (var i = 0; i < finances.length - 1; i++) {
+    totalChange += finances[i+1][1]-finances[i][1];
 }
 
 // console.log( + totalChange);
@@ -148,7 +160,7 @@ console.log("Average Change: $" + averageChange.toFixed(2));
 
 const maxProfit = Math.max(...changeProfitLoss);
 
-console.log(maxProfit);
+// console.log(maxProfit);
 
 let indexMax = changeProfitLoss.indexOf(maxProfit);
 

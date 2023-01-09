@@ -46,7 +46,8 @@ The analysis can be accessed [here.](https://clairegreenwood83.github.io/Console
 <img width="1425" alt="console" src="https://user-images.githubusercontent.com/118351853/211381296-b922ee52-4a8d-4f58-86eb-d8bd788f0471.png">
 
 - The results of the financial anaylsis will be shown as follows:
-<img width="489" alt="Financial Analysis" src="https://user-images.githubusercontent.com/118351853/211381667-8e7bafb7-055a-42d1-9283-9deccc82bf1f.png">
+<img width="494" alt="console" src="https://user-images.githubusercontent.com/118351853/211387285-5e7def4b-ac9a-4e5e-88a9-cfefb7e83610.png">
+
 
 ## Technology Stack
 The following technologies was utilised:

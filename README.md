@@ -2,7 +2,7 @@
 
 ## Description
 
-I was presented with a real-world situation to utilise my new-found JavaScript skills. I was tasked with creating code for analysing the financial records of a company. I was provided with a financial dataset in the starter/index.js file. The skills and knowledge used include pseudocoding, for loops, variables, mulitdimensional arrays and conditional logic. 
+I was presented with a real-world situation to utilise my new-found JavaScript skills. I was tasked with creating code for analysing the financial records of a company. I was provided with a financial dataset in the starter/index.js file. 
 
 ### Project Specification
 
@@ -26,6 +26,14 @@ You have been given a dataset composed of arrays with two fields, Date and Profi
 Upon opening the browser the resulting anaylsis should look as follows:
 
 <img width="712" alt="Console-finances result" src="https://user-images.githubusercontent.com/118351853/211301913-84c5e623-b596-4de2-b0e8-0b433076143f.png">
+
+## Skills
+
+- Initially, pseudocode was used to visualise and explore the actions and instructions that would need to utilise in order to write code to analyse the       financial data accurately.        
+- Knowledge and understanding of multidimensional arrays.
+- Variables were used to organise data.
+- For loops were used to analyse the data logically and efficiently. 
+- JavaScript math functions.
 
 ## Deployment
 

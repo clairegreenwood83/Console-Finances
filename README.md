@@ -16,14 +16,21 @@ You have been given a dataset composed of arrays with two fields, Date and Profi
 
   - The average of the changes in Profit/Losses over the entire period.
 
-      You will need to track what the total change in profits are from month to month and then find the average.
-      (Total/Number of months)
+      -You will need to track what the total change in profits are from month to month and then find the average.
+       (Total/Number of months)
 
   - The greatest increase in profits (date and amount) over the entire period.
 
   - The greatest decrease in losses (date and amount) over the entire period.
 
-
-
 Upon opening the browser the resulting anaylsis should look as follows:
+
 <img width="712" alt="Console-finances result" src="https://user-images.githubusercontent.com/118351853/211301913-84c5e623-b596-4de2-b0e8-0b433076143f.png">
+
+## Deployment
+
+
+
+## License
+
+

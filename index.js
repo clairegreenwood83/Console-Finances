@@ -89,9 +89,10 @@ var finances = [
 
 /* calculate the total number of months included in the dataset */
 var totalMonths = (finances.length);
-console.log("Financial Analysis")
+console.log("Financial Analysis") 
 console.log("----------------");
-console.log("Total Months is: " + totalMonths);
+console.log("Total Months: " + totalMonths);
+
 
 /* calculate the net amount of profit/losses over the entire period */
 var totalProfitLoss = 0;
@@ -103,18 +104,17 @@ for (var i = 0; i < finances.length; i++) {
 console.log("Total: $" + totalProfitLoss);
 
 
-
 /* calculate the average changes in profit/loss over the entire period */
 
-let profitLoss = []; // variable for the profit/losses
-let changeProfitLoss = [] // variable for change in profit/losses
-
+let profitLoss = []; // create a new variable/array for the profit/losses
+let changeProfitLoss = [] // create a new variable/array for change in profit/losses
 
 for (var i = 0; i < finances.length; i++) {
     
- profitLoss.push(finances[i][1]); // create a new array for the profit/losses for each month
+ profitLoss.push(finances[i][1]); // pushes the profit/losses for each month to new array
 }
-/* console.log(profitLoss); */
+/* console.log(profitLoss); print to console to check value */
+
 
 // calculate the change in profit/losses for each month and add to new array "changeProfitLoss"
 
@@ -123,7 +123,8 @@ for (var i = 0; i < profitLoss.length -1; i++) {
 }
 // console.log( + changeProfitLoss);
 
-// calculate the average change in profit/losses
+
+/* calculate the average change in profit/losses */
 
 var totalChange = 0
 
@@ -133,14 +134,15 @@ for (var i = 0; i < changeProfitLoss.length; i++) {
 
 // console.log( + totalChange);
 
-// calculate the average change in profit/losses
+// calculate the average change
 
 let averageChange = 0; // variable for the average profit/loss changes
 let numMonths = totalMonths - 1;
 
 averageChange = totalChange/numMonths
 
-console.log("Average Change: " + averageChange.toFixed(2) + " this includes the first month!");
+console.log("Average Change: $" + averageChange.toFixed(2));
+
 
 // calculate the maxiumum profit made
 
@@ -158,7 +160,7 @@ var valueAtIndexMax = finances[indexMax + 1];
 
 var dateMax = valueAtIndexMax[0];
 
-console.log("Greatest Increase: " + dateMax + ": $" + maxProfit + " (current month - previous month)" );
+console.log("Greatest Increase in Profits: " + dateMax + ": $" + maxProfit + " (current month - previous month)" );
 
 
 // calculate the maximum loss 
@@ -173,4 +175,4 @@ var valueAtIndexMin = finances[indexMin + 1];
 // console.log(valueAtIndexMin);
 
 var dateMin = valueAtIndexMin[0];
-console.log("Greatest Decrease: " + dateMin + ": $" +minProfit + " (current month - previous month)");
+console.log("Greatest Decrease in Profits: " + dateMin + ": $" +minProfit + " (current month - previous month)");

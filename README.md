@@ -2,7 +2,7 @@
 
 ## Description
 
-I was presented with a real-world situation to utilise my new-found JavaScript skills. I was tasked with creating code for analysing the financial records of a company. I was provided with a financial dataset in the starter/index.js file.
+I was presented with a real-world situation to utilise my new-found JavaScript skills. I was tasked with creating code for analysing the financial records of a company. I was provided with a financial dataset in the starter/index.js file. The skills and knowledge used include pseudocoding, for loops, variables, mulitdimensional arrays and conditional logic. 
 
 ### Project Specification
 
@@ -29,7 +29,7 @@ Upon opening the browser the resulting anaylsis should look as follows:
 
 ## Deployment
 
-To 
+The analysis can be accessed [here]
 
 ## Technology Stack
 The following technologies was utilised:

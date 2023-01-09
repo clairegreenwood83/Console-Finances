@@ -29,7 +29,16 @@ Upon opening the browser the resulting anaylsis should look as follows:
 
 ## Deployment
 
-The analysis can be accessed [here]
+The analysis can be accessed [here.](https://clairegreenwood83.github.io/Console-Finances/)
+
+- Once opened, right click anywhere in the body of the browser and select 'inspect'.
+<img width="1390" alt="inspect" src="https://user-images.githubusercontent.com/118351853/211381478-456008d6-82f8-4631-9c44-e0e2c7c325d2.png">
+
+- To the right of the screen a new window will open, find and click on console (as shown below).
+<img width="1425" alt="console" src="https://user-images.githubusercontent.com/118351853/211381296-b922ee52-4a8d-4f58-86eb-d8bd788f0471.png">
+
+- The results of the financial anaylsis will be shown as follows:
+<img width="489" alt="Financial Analysis" src="https://user-images.githubusercontent.com/118351853/211381667-8e7bafb7-055a-42d1-9283-9deccc82bf1f.png">
 
 ## Technology Stack
 The following technologies was utilised:

@@ -88,6 +88,7 @@ var finances = [
 ];
 
 /* calculate the total number of months included in the dataset */
+
 var totalMonths = (finances.length);
 console.log("Financial Analysis") 
 console.log("----------------");
@@ -95,48 +96,17 @@ console.log("Total Months: " + totalMonths);
 
 
 /* calculate the net amount of profit/losses over the entire period */
+
 var totalProfitLoss = 0;
 
 for (var i = 0; i < finances.length; i++) {
      totalProfitLoss += finances[i][1]
     }
 
-/*var i = 0;
-while (i < finances.length){
-    totalProfitLoss += finances[i][1]
-    i++
-}*/
-
 console.log("Total: $" + totalProfitLoss);
 
 
 /* calculate the average changes in profit/loss over the entire period */
-
-let profitLoss = []; // create a new variable/array for the profit/losses
-let changeProfitLoss = [] // create a new variable/array for change in profit/losses
-
-for (var i = 0; i < finances.length; i++) {
-    
- profitLoss.push(finances[i][1]); // pushes the profit/losses for each month to new array
-}
-/* console.log(profitLoss); print to console to check value */
-
-
-// calculate the change in profit/losses for each month and add to new array "changeProfitLoss"
-
-for (var i = 0; i < profitLoss.length -1; i++) {
-    changeProfitLoss.push(profitLoss[i+1]-profitLoss[i]);
-} 
-
-
-
-/* calculate the average change in profit/losses */
-
-/*var totalChange = 0
-
-for (var i = 0; i < changeProfitLoss.length; i++) {
-    totalChange += changeProfitLoss[i];
-} */
 
 var totalChange = 0
 
@@ -144,47 +114,56 @@ for (var i = 0; i < finances.length - 1; i++) {
     totalChange += finances[i+1][1]-finances[i][1];
 }
 
-// console.log( + totalChange);
-
 // calculate the average change
 
 let averageChange = 0; // variable for the average profit/loss changes
-let numMonths = totalMonths - 1;
+let numMonths = totalMonths - 1; // there are 85 changes, 1 less than number of months
 
 averageChange = totalChange/numMonths
 
-console.log("Average Change: $" + averageChange.toFixed(2));
+console.log("Average Change: $" + averageChange.toFixed(2)); // to 2 decimal places
 
 
 // calculate the maxiumum profit made
+ 
+// First I will create a new variable/array for the profit/losses so that I am able to find the maxiumum profit from the data.
+let changeProfitLoss = [] 
 
-const maxProfit = Math.max(...changeProfitLoss);
+for (var i = 0; i < finances.length -1; i++) {
+   changeProfitLoss.push(finances[i+1][1]-finances[i][1]);
+ } 
+
+const maxProfit = Math.max(...changeProfitLoss); // Math.max will find the largest number in the array
 
 // console.log(maxProfit);
 
+// calculate the index of the max profit change
+
 let indexMax = changeProfitLoss.indexOf(maxProfit);
 
-// console.log(indexMax); // calculate the index of the max profit change
+// console.log(indexMax); 
 
-var valueAtIndexMax = finances[indexMax + 1];
+var valueAtIndexMax = finances[indexMax + 1]; // find the correlating index in the finances array
 
 // console.log(valueAtIndexMax);
 
-var dateMax = valueAtIndexMax[0];
+var dateMax = valueAtIndexMax[0]; // find the date associated with the index at max profit
 
 console.log("Greatest Increase in Profits: " + dateMax + ": $" + maxProfit + " (current month - previous month)" );
 
 
-// calculate the maximum loss 
+// calculate the maximum loss (minimum profit)
 
 const minProfit = Math.min(...changeProfitLoss);
+
 // console.log(minProfit);
 
-let indexMin = changeProfitLoss.indexOf(minProfit);
+let indexMin = changeProfitLoss.indexOf(minProfit); // find the correlating index to the minimum profit
 // console.log(indexMin);
 
-var valueAtIndexMin = finances[indexMin + 1];
+var valueAtIndexMin = finances[indexMin + 1]; // find the correlating index in the finances array
 // console.log(valueAtIndexMin);
 
-var dateMin = valueAtIndexMin[0];
+var dateMin = valueAtIndexMin[0]; // find the date associated with the index at min profit
+
 console.log("Greatest Decrease in Profits: " + dateMin + ": $" +minProfit + " (current month - previous month)");
